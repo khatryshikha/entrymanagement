@@ -1,0 +1,39 @@
+{% extends "partial.html" %} {% block content %}
+<h2> Visitor Details</h2>
+
+<form method="POST">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="exampleInputEmail1">First name</label>
+            <input type="text" class="form-control" name="FirstName" required aria-describedby="emailHelp">
+            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Last name</label>
+            <input type="text" class="form-control" name="LastName" required aria-describedby="emailHelp">
+            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Email ID</label>
+            <input type="email" class="form-control" name="EmailAddress" required aria-describedby="emailHelp">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Phone Number</label>
+            <input type="tel" class="form-control" name="Phone" required aria-describedby="emailHelp">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your phone number with anyone else.</small>
+        </div>
+    
+        <button type="submit" class="btn btn-primary" value="Submit" >Submit</button>
+    </form>
+
+
+<!-- <form method="POST">
+    {% csrf_token %}
+    First name:<br> <input type="text" name="FirstName" required><br>
+    Last name: <br> <input type="text" name="LastName" required><br>
+    Email_id: <br> <input type="email" name="EmailAddress" required><br>
+    Phone No : <br> <input type="tel" name="Phone" required><br>
+    <input type="submit" value="Submit"> -->
+<!-- </form> -->
+{% endblock %}
